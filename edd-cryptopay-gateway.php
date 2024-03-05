@@ -42,7 +42,7 @@ Helpers::registerLiteModel(BeycanPress\CryptoPay\EDD\Models\TransactionsLite::cl
 
 load_plugin_textdomain('edd-cryptopay', false, basename(__DIR__) . '/languages');
 
-if (!defined('GF_MIN_WP_VERSION') /* TODO: check the plugin */) {
+if (!defined('EDD_PLUGIN_BASE')) {
     add_action('admin_notices', function (): void {
         ?>
             <div class="notice notice-error">
