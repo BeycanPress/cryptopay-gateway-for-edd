@@ -43,21 +43,9 @@ Helpers::registerLiteModel(BeycanPress\CryptoPay\EDD\Models\TransactionsLite::cl
 load_plugin_textdomain('edd-cryptopay', false, basename(__DIR__) . '/languages');
 
 if (!defined('EDD_PLUGIN_BASE')) {
-    add_action('admin_notices', function (): void {
-        ?>
-            <div class="notice notice-error">
-                <p><?php echo sprintf(esc_html__('Easy Digital Downloads (EDD) - CryptoPay Gateway: This plugin requires Easy Digital Downloads (EDD) to work. You can buy Easy Digital Downloads (EDD) by %s.', 'edd-cryptopay'), '<a href="https://wordpress.org/plugins/easy-digital-downloads/" target="_blank">' . esc_html__('clicking here', 'edd-cryptopay') . '</a>'); ?></p>
-            </div>
-        <?php
-    });
+    Helpers::requirePluginMessage('Easy Digital Downloads (EDD)', 'https://wordpress.org/plugins/easy-digital-downloads/');
 } elseif (Helpers::bothExists()) {
     new BeycanPress\CryptoPay\EDD\Loader();
 } else {
-    add_action('admin_notices', function (): void {
-        ?>
-            <div class="notice notice-error">
-                <p><?php echo sprintf(esc_html__('Easy Digital Downloads (EDD) - CryptoPay Gateway: This plugin is an extra feature plugin so it cannot do anything on its own. It needs CryptoPay to work. You can buy CryptoPay by %s.', 'edd-cryptopay'), '<a href="https://beycanpress.com/product/cryptopay-all-in-one-cryptocurrency-payments-for-wordpress/?utm_source=wp_org_addons&utm_medium=edd" target="_blank">' . esc_html__('clicking here', 'edd-cryptopay') . '</a>'); ?></p>
-            </div>
-        <?php
-    });
+    Helpers::requireCryptoPayMessage('Easy Digital Downloads (EDD)');
 }

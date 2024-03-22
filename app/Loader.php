@@ -50,7 +50,11 @@ class Loader
      */
     public function paymentFinished(object $data): void
     {
-        edd_update_payment_status($data->getOrder()->getId(), 'complete');
+        if ($data->getStatus()) {
+            edd_update_payment_status($data->getOrder()->getId(), 'complete');
+        } else {
+            edd_update_payment_status($data->getOrder()->getId(), 'failed');
+        }
     }
 
     /**
