@@ -44,8 +44,8 @@ You can easily translate with Loco translate.
 
 == Installation ==
 
-1. Upload the entire `/edd-cryptopay-gateway` directory to the `/wp-content/plugins/` directory.
-2. Activate Easy Digital Downloads (EDD) - CryptoPay Gateway through the 'Plugins' menu in WordPress.
+1. Upload the entire `/cryptopay-gateway-for-edd` directory to the `/wp-content/plugins/` directory.
+2. Activate CryptoPay Gateway for Easy Digital Downloads (EDD) through the 'Plugins' menu in WordPress.
 3. Enjoy.
 
 == Changelog ==

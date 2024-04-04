@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Easy Digital Downloads (EDD) - CryptoPay Gateway\n"
+"Project-Id-Version: CryptoPay Gateway for Easy Digital Downloads (EDD)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-22 14:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -32,7 +32,7 @@ msgid "BeycanPress LLC"
 msgstr ""
 
 #. Name of the plugin
-msgid "Easy Digital Downloads (EDD) - CryptoPay Gateway"
+msgid "CryptoPay Gateway for Easy Digital Downloads (EDD)"
 msgstr ""
 
 #: app/Loader.php:29
