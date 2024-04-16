@@ -6,6 +6,7 @@ namespace BeycanPress\CryptoPay\EDD\Gateways;
 
 use EDD\Orders\Order;
 use BeycanPress\CryptoPay\Payment;
+use BeycanPress\CryptoPay\Helpers;
 use BeycanPress\CryptoPay\Types\Order\OrderType;
 
 final class GatewayPro extends AbstractGateway
@@ -28,13 +29,13 @@ final class GatewayPro extends AbstractGateway
             return;
         }
 
-        echo (new Payment('edd'))
+        Helpers::ksesEcho((new Payment('edd'))
         ->setOrder(
             OrderType::fromArray([
                 'id' => $order->get_number(),
                 'amount' => $order->total,
                 'currency' => edd_get_currency(),
             ])
-        )->html(loading:true);
+        )->html(loading:true));
     }
 }
