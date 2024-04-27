@@ -1,4 +1,4 @@
-=== Cryptocurrency Payment Gateway Plugin for Easy Digital Downloads (EDD) by CryptoPay ===
+=== Cryptocurrency Payment Gateway for Easy Digital Downloads (EDD) by CryptoPay ===
 Contributors: BeycanPress
 Tags: Bitcoin, Ethereum, Crypto, Payments, Easy Digital Downloads (EDD)
 Requires at least: 5.0
@@ -9,7 +9,7 @@ Version: 1.0.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Cryptocurrency Payment Gateway Plugin for Easy Digital Downloads (EDD), Bitcoin payments, Ethereum Payments, Crypto payments, USDT, BTC, ETH, SOL
+Cryptocurrency Payment Gateway for Easy Digital Downloads (EDD), Bitcoin payments, Ethereum, Solana, Payments, Crypto payments, USDT, BTC, ETH, SOL
 
 == Description ==
 
