@@ -33,6 +33,7 @@ class Loader
                 'orderId' => function ($tx) {
                     return Helpers::run('view', 'components/link', [
                         'url' => sprintf(admin_url('edit.php?post_type=download&page=edd-payment-history&view=view-order-details&id=%d'), $tx->orderId), // @phpcs:ignore
+                        // translators: %d: order id
                         'text' => sprintf(esc_html__('View order #%d', 'gf-cryptopay'), $tx->orderId)
                     ]);
                 }

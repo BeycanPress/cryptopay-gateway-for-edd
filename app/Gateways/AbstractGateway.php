@@ -61,6 +61,7 @@ abstract class AbstractGateway
         if ($this->id === $chosenGateway && !$isEnabled) {
             edd_set_error(
                 $this->id . '_gateway_not_configured',
+                /* translators: %s: Payment Gateway Name */
                 sprintf(__('%s payment gateway is not setup.', 'edd-cryptopay'), $this->name)
             );
         }
@@ -108,6 +109,7 @@ abstract class AbstractGateway
                 edd_set_error(
                     $this->id . '_error',
                     sprintf(
+                        /* translators: %s: Error Message */
                         __('Unexpected error in payment gateway! Error: %s', 'edd-cryptopay'),
                         $e->getMessage()
                     )

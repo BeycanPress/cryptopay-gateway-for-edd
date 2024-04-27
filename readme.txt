@@ -1,6 +1,6 @@
 === Cryptocurrency Payment Gateway Plugin for Easy Digital Downloads (EDD) by CryptoPay ===
 Contributors: BeycanPress
-Tags: Bitcoin, Ethereum, Binance Smart Chain, Blockchain, Networks, Cryptocurrency, Payments, Gateway, WordPress, Easy Digital Downloads (EDD)
+Tags: Bitcoin, Ethereum, Crypto, Payments, Easy Digital Downloads (EDD)
 Requires at least: 5.0
 Tested up to: 6.5.0
 Requires PHP: 8.1
@@ -9,7 +9,7 @@ Version: 1.0.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Cryptocurrency Payment Gateway Plugin for Easy Digital Downloads (EDD), Cryptocurrency payments for WordPress, Bitcoin payments, Crypto payments, USDT, BTC, ETH, SOL
+Cryptocurrency Payment Gateway Plugin for Easy Digital Downloads (EDD), Bitcoin payments, Ethereum Payments, Crypto payments, USDT, BTC, ETH, SOL
 
 == Description ==
 
