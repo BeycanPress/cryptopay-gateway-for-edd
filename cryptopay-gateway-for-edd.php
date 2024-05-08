@@ -21,7 +21,7 @@ defined('ABSPATH') || exit;
  * Text Domain: edd-cryptopay
  * Tags: Cryptopay, Cryptocurrency, WooCommerce, WordPress, MetaMask, Trust, Binance, Wallet, Ethereum, Bitcoin, Binance smart chain, Payment, Plugin, Gateway, Moralis, Converter, API, coin market cap, CMC
  * Requires at least: 5.0
- * Tested up to: 6.5.0
+ * Tested up to: 6.5.3
  * Requires PHP: 8.1
 */
 
@@ -42,10 +42,12 @@ Helpers::registerLiteModel(BeycanPress\CryptoPay\EDD\Models\TransactionsLite::cl
 
 load_plugin_textdomain('edd-cryptopay', false, basename(__DIR__) . '/languages');
 
-if (!defined('EDD_PLUGIN_BASE')) {
-    Helpers::requirePluginMessage('Easy Digital Downloads (EDD)', 'https://wordpress.org/plugins/easy-digital-downloads/');
-} elseif (Helpers::bothExists()) {
-    new BeycanPress\CryptoPay\EDD\Loader();
-} else {
-    Helpers::requireCryptoPayMessage('Easy Digital Downloads (EDD)');
-}
+add_action('plugins_loaded', function (): void {
+    if (!defined('EDD_PLUGIN_BASE')) {
+        Helpers::requirePluginMessage('Easy Digital Downloads (EDD)', 'https://wordpress.org/plugins/easy-digital-downloads/');
+    } elseif (Helpers::bothExists()) {
+        new BeycanPress\CryptoPay\EDD\Loader();
+    } else {
+        Helpers::requireCryptoPayMessage('Easy Digital Downloads (EDD)');
+    }
+});
