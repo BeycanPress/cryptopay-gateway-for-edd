@@ -43,6 +43,9 @@ Helpers::registerLiteModel(BeycanPress\CryptoPay\EDD\Models\TransactionsLite::cl
 load_plugin_textdomain('edd-cryptopay', false, basename(__DIR__) . '/languages');
 
 add_action('plugins_loaded', function (): void {
+    Helpers::registerModel(BeycanPress\CryptoPay\EDD\Models\TransactionsPro::class);
+    Helpers::registerLiteModel(BeycanPress\CryptoPay\EDD\Models\TransactionsLite::class);
+
     if (!defined('EDD_PLUGIN_BASE')) {
         Helpers::requirePluginMessage('Easy Digital Downloads (EDD)', 'https://wordpress.org/plugins/easy-digital-downloads/');
     } elseif (Helpers::bothExists()) {
