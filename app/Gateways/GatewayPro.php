@@ -8,6 +8,7 @@ use EDD\Orders\Order;
 use BeycanPress\CryptoPay\Payment;
 use BeycanPress\CryptoPay\Helpers;
 use BeycanPress\CryptoPay\Types\Order\OrderType;
+use BeycanPress\CryptoPay\WooCommerce\Gateway\CryptoPay;
 
 final class GatewayPro extends AbstractGateway
 {
@@ -25,7 +26,7 @@ final class GatewayPro extends AbstractGateway
      */
     public function receipt(Order $order): void
     {
-        if ($order->is_complete()) {
+        if ($order->is_complete() || CryptoPay::ID !== $order->gateway) {
             return;
         }
 

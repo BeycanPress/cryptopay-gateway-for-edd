@@ -19,9 +19,9 @@ defined('ABSPATH') || exit;
  * License:     GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: edd-cryptopay
- * Tags: Cryptopay, Cryptocurrency, WooCommerce, WordPress, MetaMask, Trust, Binance, Wallet, Ethereum, Bitcoin, Binance smart chain, Payment, Plugin, Gateway, Moralis, Converter, API, coin market cap, CMC
+ * Tags: Bitcoin, Ethereum, Crypto, Payments, Easy Digital Downloads (EDD)
  * Requires at least: 5.0
- * Tested up to: 6.5.3
+ * Tested up to: 6.6
  * Requires PHP: 8.1
 */
 
