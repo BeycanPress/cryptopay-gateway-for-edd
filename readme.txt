@@ -32,7 +32,7 @@ What is CryptoPay?
 
 **<a href="https://wordpress.org/plugins/easy-digital-downloads/">Review Easy Digital Downloads</a>**
 
-See CryptoPay Demo **<a href="https://cryptopay.beycanpress.net/" target="_blank">Demo</a>**
+See CryptoPay **<a href="https://cryptopay.beycanpress.net/" target="_blank">Demo</a>**
 
 = Privacy notices =
 
