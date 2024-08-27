@@ -12,6 +12,5 @@ First of all, we want you to know that this is an integration plugin, so it does
 
 After installing the plugin, you can activate CryptoPay through the Easy Digital Downloads settings and start receiving payments, as you can see in the images below.
 
-<a href="https://ibb.co/C6z4pCt"><img src="https://i.ibb.co/pQxN6VP/Screenshot-1.png" alt="Screenshot-1" border="0"></a>
-<a href="https://ibb.co/Lk1pqjS"><img src="https://i.ibb.co/8K98RvM/Screenshot-2.png" alt="Screenshot-2" border="0"></a>
-<a href="https://ibb.co/F6mjvCp"><img src="https://i.ibb.co/nr652tp/Screenshot-3.png" alt="Screenshot-3" border="0"></a>
+![Screenshot-1](https://i.ibb.co/pQxN6VP/Screenshot-1.png)
+![Screenshot-2](https://i.ibb.co/8K98RvM/Screenshot-2.png)
