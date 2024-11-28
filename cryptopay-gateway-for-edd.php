@@ -11,7 +11,7 @@ defined('ABSPATH') || exit;
 
 /**
  * Plugin Name: CryptoPay Gateway for Easy Digital Downloads (EDD)
- * Version:     1.0.1
+ * Version:     1.0.2
  * Plugin URI:  https://beycanpress.com/cryptopay/
  * Description: Adds Cryptocurrency payment gateway (CryptoPay) for Easy Digital Downloads (EDD).
  * Author:      BeycanPress LLC
@@ -21,7 +21,7 @@ defined('ABSPATH') || exit;
  * Text Domain: edd-cryptopay
  * Tags: Bitcoin, Ethereum, Crypto, Payments, Easy Digital Downloads (EDD)
  * Requires at least: 5.0
- * Tested up to: 6.6
+ * Tested up to: 6.7.1
  * Requires PHP: 8.1
 */
 
@@ -29,7 +29,7 @@ defined('ABSPATH') || exit;
 require_once __DIR__ . '/vendor/autoload.php';
 
 define('EDD_CRYPTOPAY_FILE', __FILE__);
-define('EDD_CRYPTOPAY_VERSION', '1.0.0');
+define('EDD_CRYPTOPAY_VERSION', '1.0.2');
 define('EDD_CRYPTOPAY_KEY', basename(__DIR__));
 define('EDD_CRYPTOPAY_URL', plugin_dir_url(__FILE__));
 define('EDD_CRYPTOPAY_DIR', plugin_dir_path(__FILE__));
@@ -40,14 +40,19 @@ use BeycanPress\CryptoPay\Integrator\Helpers;
 Helpers::registerModel(BeycanPress\CryptoPay\EDD\Models\TransactionsPro::class);
 Helpers::registerLiteModel(BeycanPress\CryptoPay\EDD\Models\TransactionsLite::class);
 
-load_plugin_textdomain('edd-cryptopay', false, basename(__DIR__) . '/languages');
+add_action('init', function (): void {
+    load_plugin_textdomain('edd-cryptopay', false, basename(__DIR__) . '/languages');
+});
 
 add_action('plugins_loaded', function (): void {
     Helpers::registerModel(BeycanPress\CryptoPay\EDD\Models\TransactionsPro::class);
     Helpers::registerLiteModel(BeycanPress\CryptoPay\EDD\Models\TransactionsLite::class);
 
     if (!defined('EDD_PLUGIN_BASE')) {
-        Helpers::requirePluginMessage('Easy Digital Downloads (EDD)', 'https://wordpress.org/plugins/easy-digital-downloads/');
+        Helpers::requirePluginMessage(
+            'Easy Digital Downloads (EDD)',
+            admin_url('plugin-install.php?s=Easy%2520Digital%2520Downloads&tab=search&type=term')
+        );
     } elseif (Helpers::bothExists()) {
         new BeycanPress\CryptoPay\EDD\Loader();
     } else {
